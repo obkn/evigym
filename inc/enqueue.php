@@ -41,14 +41,7 @@ jQuery(function($) {
   if ($('.traigners-top .swiper-slide').length) {
     $('.traigners-top').bxSlider({ minSlides:2, maxSlides:4, slideWidth:220, slideMargin:10, touchEnabled:false });
   }
-  (function toggleNav() {
-    var body = document.body;
-    var $hamburger = $('.js-hamburger');
-    var blackBg = document.getElementById('js-black-bg');
-    $hamburger.on('click', function() { body.classList.toggle('nav-open'); });
-    if (blackBg) blackBg.addEventListener('click', function() { body.classList.remove('nav-open'); });
-  })();
 });
 JS;
-  wp_add_inline_script('ev-main', $inline);
+  // wp_add_inline_script('ev-main', $inline);
 }, 20);

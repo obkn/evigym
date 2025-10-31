@@ -7,7 +7,6 @@
  */
 
 jQuery(function ($) {
-
   /* ================================
    * ハンバーガーメニュー開閉
    * ================================ */
@@ -18,8 +17,13 @@ jQuery(function ($) {
   function toggleNav() {
     $body.toggleClass('nav-open');
   }
-  $hamburger.on('click', toggleNav);
-  $blackBg.on('click', () => $body.removeClass('nav-open'));
+
+  if ($hamburger.length) {
+    $hamburger.on('click', toggleNav);
+  }
+  if ($blackBg.length) {
+    $blackBg.on('click', () => $body.removeClass('nav-open'));
+  }
 
   /* ================================
    * contactボタンの固定
@@ -29,11 +33,7 @@ jQuery(function ($) {
     const btnTop = $contactBtn.offset().top;
     $(window).on('scroll', function () {
       const scrollTop = $(this).scrollTop();
-      if (scrollTop >= btnTop) {
-        $contactBtn.addClass('fixed');
-      } else {
-        $contactBtn.removeClass('fixed');
-      }
+      $contactBtn.toggleClass('fixed', scrollTop >= btnTop);
     });
   }
 
@@ -41,7 +41,7 @@ jQuery(function ($) {
    * matchHeight 揃え
    * ================================ */
   if ($.fn.matchHeight) {
-    $('.js-matchHeight').matchHeight();
+    $('.js-matchHeight, .js-matchHeigtht').matchHeight();
   }
 
   /* ================================
@@ -74,6 +74,13 @@ jQuery(function ($) {
       pause: 5000,
       touchEnabled: true,
       pager: true
+    });
+
+    // 汎用スライダー
+    $('.slider').bxSlider({
+      auto: true,
+      pause: 5000,
+      touchEnabled: false
     });
   }
 
@@ -147,11 +154,7 @@ jQuery(function ($) {
   const $gotop = $('#gotop');
   if ($gotop.length) {
     $(window).on('scroll', function () {
-      if ($(this).scrollTop() > 200) {
-        $gotop.fadeIn(200);
-      } else {
-        $gotop.fadeOut(200);
-      }
+      $gotop.toggle($(this).scrollTop() > 200);
     });
   }
 
