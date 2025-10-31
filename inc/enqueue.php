@@ -24,6 +24,7 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('ev-matchheight', 'https://evigym.com/js/jquery.matchHeight.js', ['jquery'], null, true);
   wp_enqueue_script('ev-main', 'https://evigym.com/js/main.js', ['jquery'], null, true);
   wp_enqueue_script('ev-lazysizes', 'https://evigym.com/js/lazysizes.min.js', [], null, true);
+  wp_enqueue_script('evigym-front-init', get_template_directory_uri() . '/assets/js/front-init.js', ['jquery'], null, true);
 
   $inline = <<< 'JS'
 jQuery(function($) {
