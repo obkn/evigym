@@ -1,0 +1,1096 @@
+@charset "UTF-8";
+/* CSS Document */
+/*�ً}�{�^��*/
+.emergency {
+  background: #ff0000;
+  padding: 5px;
+  color: #fff;
+  line-height: 160%;
+}
+
+.emergency a {
+  max-width: 980px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* top */
+.mainvisual img {
+  object-fit: cover;
+  max-height: 720px;
+}
+
+body#home .contact-btn {
+  position: fixed;
+  z-index: 69;
+  width: 30%;
+}
+
+main h4 {
+  line-height: 160%;
+  margin-bottom: 5px;
+  font-size: 120%;
+}
+
+#Menu p {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  font-size: 100%;
+  margin-top: 10px;
+}
+
+#Menu .col-6 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section#News h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+section#News ul {
+  margin-top: 10px;
+}
+
+section#News ul li {
+  border-bottom: dotted 1px #999;
+  padding: 3% 1% 2% 3%;
+  font-size: 120%;
+}
+
+section#News ul li p.date {
+  font-size: 11px;
+  margin-top: 5px;
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  color: #999;
+}
+
+.slide-wrap {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.side-box {
+  flex: 0 0 40%;
+  padding: 0 8px;
+}
+
+.side-box img {
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 260px;
+}
+
+.side-box p {
+  margin-bottom: 10px;
+}
+
+img.media-img {
+  width: 80%;
+}
+
+/* news */
+section#News ul li date {
+  float: left;
+}
+
+/* �K��n */
+#Terms .row {
+  margin-bottom: 60px;
+}
+
+#Terms .row h4 {
+  margin-bottom: 12px;
+  line-height: 140%;
+  border-bottom: 1px dotted #ccc;
+}
+
+#Terms .row p {
+  line-height: 180%;
+  margin-bottom: 6px;
+}
+
+#legal dl, #Questions dl {
+  line-height: 160%;
+}
+
+#legal dt {
+  float: none;
+  margin-bottom: 10px;
+  border-left: 5px solid #ccc;
+  text-indent: 5px;
+}
+
+#legal dd {
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 10px;
+}
+
+/* faq */
+#Questions ul li {
+  margin-bottom: 30px;
+}
+
+#Questions ul li a {
+  display: block;
+}
+
+#Questions h4 {
+  border-bottom: 1px dotted #ccc;
+  border-left: 5px solid #ccc;
+  text-indent: 10px;
+  margin: 0 0 20px;
+}
+
+#Questions dl {
+  margin-bottom: 60px;
+  margin-left: 16px;
+}
+
+#Questions dt {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-right: 26px;
+}
+#Questions dt h3 {
+  display: inline;
+  font-size: 100%;
+}
+
+#Questions dt:before {
+  content: "Q :";
+  margin-right: 8px;
+}
+
+#Questions dd {
+  padding-bottom: 30px;
+  margin-left: -18px;
+}
+
+#Questions dd:before {
+  content: "A :";
+  margin-right: 8px;
+}
+
+#Questions dd p, #Questions dt p {
+  margin-left: 23px;
+  margin-top: -23px;
+}
+
+#Questions .panel dt:after {
+  margin-top: -24px;
+}
+
+.panel > dt {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #c1c1c1;
+}
+
+.panel > dd {
+  margin: 0px;
+  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.panel dt {
+  position: relative;
+}
+
+.panel dt:after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+}
+
+.panel dt.ac:after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  margin-top: 8px;
+}
+
+/* page */
+body.page .name h4 {
+  font-size: 130%;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+body.page .name h5 {
+  margin: 10px 0;
+  font-size: 100%;
+}
+
+body.page .name p {
+  margin-bottom: 20px;
+}
+
+body.page .mainvisual {
+  height: 260px;
+  margin-bottom: 10px;
+}
+
+body.page .mainvisual.mv00 {
+  background: url("/img/page-main0.webp") no-repeat center 54% #555;
+}
+
+body.page .mainvisual.mv01 {
+  background: url("/img/page-main1.webp") no-repeat center center #515151;
+}
+
+body.page .mainvisual.mv02 {
+  background: url("/img/page-main2.webp") no-repeat center -60px #555;
+}
+
+body.page .mainvisual.mv03 {
+  background: url("/img/page-main3.webp") no-repeat center 62% #515151;
+}
+
+body.page .mainvisual.mv04 {
+  background: url("/img/page-main4.webp") no-repeat center 40% #515151;
+}
+
+body.page .mainvisual.mv05 {
+  background: url("/img/page-main5.webp") no-repeat center 65% #515151;
+}
+
+body.page .mainvisual.mv06 {
+  background: url("/img/page-main6.webp") no-repeat center 70% #515151;
+}
+
+body.page .mainvisual.mv08 {
+  background: url("/img/page-main8.webp") no-repeat center 72% #515151;
+}
+
+body.page .mainvisual.mv09 {
+  background: url("/img/page-main9.webp") no-repeat center 90% #515151;
+}
+
+body.page .mainvisual.mv10 {
+  background: url("/img/page-main10.webp") no-repeat center 30% #515151;
+}
+
+body.page .mainvisual.mv11 {
+  background: url("/img/page-main11.webp") no-repeat center 30% #515151;
+}
+
+/* plan */
+#Plan .bg-color {
+  margin: 0 1.5%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+#Plan .bg-color div {
+  margin: 10px auto 20px;
+}
+
+#Plan .bg-color div h4.plantitle {
+  border-left: 10px solid #999;
+  text-indent: 4px;
+}
+
+#Plan .bg-color img {
+  max-width: 70px;
+  float: right;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+#Plan .bg-color h4 {
+  margin-bottom: 0;
+}
+
+#Plan .bg-color h4 span {
+  font-size: 180%;
+  line-height: 160%;
+}
+
+#Plan .bg-color hr {
+  margin: 5px 0;
+  clear: both;
+}
+
+#Plan .bg-color .col-sm-12 small {
+  margin-left: 60px;
+  margin-bottom: 5px;
+}
+
+/* contact */
+#form .row {
+  margin-top: 24px;
+}
+
+#form .row h4 {
+  margin-top: 8px;
+}
+
+#form .row h4 span {
+  margin-left: 10px;
+}
+
+#form .row small {
+  line-height: 140%;
+}
+
+/* flow*/
+#Flow .row img {
+  margin-bottom: 10px;
+}
+
+#Flow .row p.bg-color, #Reserve-flow .row p.bg-color {
+  padding: 10px 16px 16px;
+}
+
+/* reservation */
+#reserve .row a.btn {
+  display: block;
+  padding: 40px 20px;
+  border-radius: 50%;
+  height: 126px;
+  width: 126px;
+  margin-bottom: 10px;
+}
+
+#reserve .row p {
+  margin-bottom: 30px;
+}
+
+#reserve .row .panel dt, #flow .row .panel dt {
+  padding: 10px;
+  font-size: 120%;
+  line-height: 160%;
+}
+
+section.Note h3 {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 5px;
+}
+
+#reserve #Use.bg-color {
+  padding-bottom: 30px;
+}
+
+#reserve #Use p {
+  margin: 20px 0;
+}
+
+#reserve #Use a {
+  padding: 20px;
+  background: #fff;
+  font-size: 160%;
+  display: block;
+  text-align: center;
+  border: solid 1px #656363;
+  color: #333;
+}
+
+#reserve i {
+  padding: 6px 12px;
+}
+
+#flow i {
+  padding: 20px 30px;
+}
+
+i.icon-first {
+  background: url("/img/reserve/icon-first.webp") no-repeat center center;
+}
+
+i.icon-member {
+  background: url("/img/reserve/icon-member.webp") no-repeat top center;
+}
+
+i.icon-coupon {
+  background: url("/img/reserve/icon-coupon.webp") no-repeat center center;
+}
+
+i.icon-revival {
+  background: url("/img/reserve/icon-revival.webp") no-repeat center center;
+}
+
+i.icon-evigym {
+  background: url("/img/reserve/icon-evigym.webp") no-repeat center center;
+}
+
+i.icon-online {
+  background: url("/img/reserve/icon-online.webp") no-repeat center center;
+}
+
+#Reserve-flow .row p {
+  margin-left: 20px;
+}
+
+#Reserve-flow .row .col-lg-4 img, #Flow .row .col-lg-4 img {
+  border: 1px #ccc solid;
+  margin-bottom: 10px;
+}
+
+#flow .row .panel dt:after {
+  top: 15px;
+}
+
+/* about */
+.Person span.maru {
+  color: #fff;
+  background: #999;
+  margin-right: 10px;
+  padding: 3px 8px;
+  border-radius: 50%;
+}
+
+body.page #Stores .name h4.line-none {
+  text-decoration: none;
+}
+
+#Stores a.btn {
+  display: block;
+}
+
+#Stores .name a.google-icon {
+  display: block;
+  margin-top: 15px;
+}
+
+#Stores .name a.google-icon:after {
+  content: ">>";
+}
+
+#Stores .name {
+  margin-bottom: 6%;
+}
+
+main #Stores .row .col-12 h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 180%;
+}
+
+#Stores .bx-wrapper {
+  margin-bottom: 6%;
+}
+
+#Stores .bx-wrapper .bx-controls-direction a {
+  top: 40%;
+}
+
+#Stores .swiper-slide div.number {
+  margin-top: -40px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+#Stores .swiper-slide p {
+  margin-top: 18px;
+}
+
+#Stores .staff-photo {
+  margin-left: 30px;
+}
+
+#Stores img {
+  margin-bottom: 10px;
+}
+
+body.page #Trainers .name h4 {
+  text-decoration: none;
+}
+
+body.page #Trainers .name a.btn {
+  margin-top: 10px;
+  margin-bottom: 20%;
+}
+
+#Trainers .bx-wrapper .bx-controls-direction a {
+  top: 30%;
+}
+
+main #Trainers .row .tr-title h3 {
+  margin-bottom: 10px;
+}
+
+main #Trainers .row .tr-title p {
+  text-align: center;
+}
+
+#Trainers main .row .tr-title h3 {
+  margin-bottom: 10px;
+}
+
+#Trainers main .row .tr-title p {
+  text-align: center;
+}
+
+#Trainers .interview .row {
+  margin-bottom: 5%;
+}
+
+#Trainers .interview .row p.question, #Trainers .profile p.question {
+  margin-bottom: 5px;
+  color: #021866;
+  font-style: italic;
+}
+
+#Trainers .interview .row p, #Trainers .profile p.answer {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 110%;
+  line-height: 220%;
+}
+
+#Trainers .interview .row p.answer span {
+  background: #fdefdb;
+}
+
+#Trainers .interview .row img {
+  margin-bottom: 10px;
+}
+
+#Trainers .interview .row h2 {
+  font-size: 200%;
+  text-align: center;
+}
+
+#Trainers .interview .row h3 {
+  font-size: 160%;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 160%;
+}
+
+#Trainers .profile h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 160%;
+}
+
+#Trainers .profile ul li {
+  margin-bottom: 10px;
+  line-height: 180%;
+}
+
+#Trainers .profile ul li span {
+  color: #333;
+}
+
+#Trainers .profile ul li span.question {
+  color: #021866;
+  font-style: italic;
+}
+
+#Trainers img.fit-img {
+  height: 95%;
+  object-fit: cover;
+}
+
+#Trainers .interview .row.mb0 {
+  margin-bottom: 0;
+}
+
+#Trainers .interview .row.bg-color.padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#Trainers .interview .row figure {
+  text-align: center;
+  margin: -20px 0 20px;
+}
+
+#Trainers .interview .row figcaption {
+  color: #999;
+}
+
+.interview-list .img {
+  margin-bottom: 20px;
+}
+
+.interview-list .img img {
+  margin-bottom: 0;
+}
+
+.interview-list .name {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.interview-list .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 0;
+  color: #595757;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.interview-list [class*="col"] {
+  margin-bottom: 30px;
+}
+
+/* sitemap */
+body#sitemap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body#sitemap table td {
+  padding: 20px 0 20px 0;
+  text-align: left;
+  line-height: 200%;
+  min-width: 33.33333%;
+}
+
+body#sitemap table td a {
+  text-decoration: underline;
+}
+
+/* 記事カルーセル */
+.article-carousel_slide {
+  padding: 0 8px;
+}
+
+.article-carousel_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #231815;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.article-carousel_text {
+  color: #595757;
+  font-size: 12px;
+}
+
+.article-carousel_date {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 16px;
+  background-color: #c9caca;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.carousel-wrapper.bg-color {
+  padding-bottom: 30px;
+}
+
+.carousel-wrapper .tit .description {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 575px) {
+  .carousel-wrapper .col-12 {
+    padding: 0;
+  }
+}
+
+/* 店舗ブログ */
+.blog-list_item {
+  padding: 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.blog-list_item a {
+  display: flex;
+  padding: 15px;
+}
+
+.blog-list_item a:hover {
+  background-color: #fafafa;
+}
+
+.blog-list_item-img {
+  width: 150px;
+  margin: 0;
+}
+
+@media screen and (max-width: 575px) {
+  .blog-list_item-img {
+    width: 200px;
+  }
+}
+
+.blog-list_item-text {
+  margin: 0;
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 575px) {
+  .blog-list_item-text {
+    padding-left: 10px;
+  }
+}
+
+.blog-list_item-info {
+  margin-bottom: 1em;
+}
+
+.blog-list_item-date {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: #c9caca;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.blog-list_item-title {
+  margin-bottom: 1em;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.blog-list_item-desc {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.st-pagelink {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.st-pagelink:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.st-pagelink a {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.st-pagelink a:hover {
+  opacity: 0.5;
+}
+
+.st-pagelink .page-numbers {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  min-width: 20px;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.st-pagelink .page-numbers.current {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 960px) {
+  .st-pagelink .page-numbers {
+    padding: 5px 8px;
+  }
+}
+
+#StoresBlogArticle .blog-article_info {
+  margin-bottom: 15px;
+}
+
+#StoresBlogArticle .blog-article_date {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: #c9caca;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#StoresBlogArticle .blog-article_title {
+  font-size: 22px;
+  line-height: 35px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 960px) {
+  #StoresBlogArticle .blog-article_title {
+    font-size: 30px;
+    line-height: 40px;
+    color: #333;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #StoresBlogArticle .blog-article_title {
+    font-size: 27px;
+    line-height: 40px;
+    color: #333;
+  }
+}
+
+#StoresBlogArticle .blog-article_body h2 {
+  background: #f3f3f3;
+  color: #1a1a1a;
+  font-size: 19px;
+  line-height: 27px;
+  margin: 20px 0;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (min-width: 600px) {
+  #StoresBlogArticle .blog-article_body h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #StoresBlogArticle .blog-article_body h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+#StoresBlogArticle .blog-article_body h3 {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 20px 0;
+  padding: 10px 15px;
+  color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-position: left center;
+  border-bottom: 1px #999999 dotted;
+}
+
+@media screen and (min-width: 600px) {
+  #StoresBlogArticle .blog-article_body h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+#StoresBlogArticle .blog-article_body p {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  #StoresBlogArticle .blog-article_body p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #StoresBlogArticle .blog-article_body p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+#StoresBlogArticle .blog-article_body p img.size-full, #StoresBlogArticle .blog-article_body p img.size-large {
+  margin-bottom: 10px;
+  height: auto;
+  max-width: 100%;
+}
+
+#StoresBlogArticle .blog-article_body p a {
+  color: #0056b3;
+}
+
+/*========����media Q�@PC����========*/
+@media screen and (min-width: 979px) {
+  body.page .name h4, body.page .name h5 {
+    /*text-align:left;*/
+  }
+}
+
+@media screen and (min-width: 581px) {
+  body.page #Stores .name h4.line-none {
+    margin: -10px 0 10px;
+  }
+}
+
+/*========����media Q�@�X�}�z����========*/
+@media only screen and (max-width: 980px) {
+  body.page .mainvisual.mv00 {
+    background: url("/img/page-main0.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv01 {
+    background: url("/img/page-main1.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv02 {
+    background: url("/img/page-main2.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv03 {
+    background: url("/img/page-main3.webp") repeat-x bottom center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv04 {
+    background: url("/img/page-main4.webp") repeat-x center 60%;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv05 {
+    background: url("/img/page-main5.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv06 {
+    background: url("/img/page-main6.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv08 {
+    background: url("/img/page-main8.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv09 {
+    background: url("/img/page-main9.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv10 {
+    background: url("/img/page-main10.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  body.page .mainvisual.mv11 {
+    background: url("/img/page-main11.webp") repeat-x center center;
+    background-size: auto 100%;
+  }
+  .fixed {
+    position: fixed;
+    top: auto !important;
+    bottom: 36px;
+  }
+  .fixed img {
+    object-fit: cover;
+    max-height: 80px;
+  }
+  #reserve #Use p {
+    margin: 0 0 10px;
+  }
+  #Plan .bg-color img {
+    margin-top: 0px;
+  }
+  #Stores .staff-photo {
+    margin-left: 0px;
+  }
+  img.media-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #Questions ul li {
+    width: 50%;
+    float: left;
+  }
+  #contact .txtc, #News .txtc {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .side-box {
+    flex: 0 0 90%;
+  }
+  #Plan .bg-color .col-sm-12 small {
+    margin-left: 0;
+  }
+  body.page .name h4 {
+    text-align: center;
+  }
+  #Stores .bg-color {
+    padding-top: 20px;
+  }
+  #Stores .bx-wrapper .bx-controls-direction a {
+    top: 45%;
+  }
+  #Stores .col-12 h3 {
+    font-size: 130%;
+  }
+  body#sitemap table td {
+    min-width: 100%;
+    width: 100% !important;
+    display: block;
+    padding: 2px 0;
+    box-sizing: border-box;
+  }
+  body#sitemap table td.link1 {
+    padding-left: 24px;
+  }
+  body#sitemap table td.link2 {
+    padding-left: 40px;
+  }
+  main .row h2 {
+    text-align: center;
+  }
+  #Questions ul {
+    padding-bottom: 30px;
+    clear: both;
+    margin-top: -20px;
+  }
+  #Questions ul li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  #Questions ul li a {
+    background: #f1f1f1;
+    padding: 15px 10px;
+    margin: 2px;
+  }
+  #Trainers .interview .row.bg-color.padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #Trainers .interview .row p, #Trainers .profile p.answer {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body.page #Concept .name h5, #Menu h4 {
+    text-align: left;
+  }
+  section#News img.main {
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: 240px;
+  }
+  #Menu p {
+    font-size: 85%;
+  }
+  body#Traigners #Traigners .name h5 {
+    font-size: 90%;
+  }
+  body#Trainers #Trainers .name h5 {
+    font-size: 90%;
+  }
+}

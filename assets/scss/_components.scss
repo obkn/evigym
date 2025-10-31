@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: $primary;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.button--accent {
+  background: $accent;
+}

@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+.site-title {
+  font-weight: 700;
+  color: $gray-700;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  color: $gray-700;
+}

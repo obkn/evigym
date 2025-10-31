@@ -1,0 +1,9 @@
+/*
+Theme Name: eviGym WP (initial)
+Description: WordPress-only rebuild of eviGym with partials and CPTs (store, interview). Initial drop.
+Author: Chat (with Kenji)
+Version: 0.2.1
+Text Domain: evigym
+*/
+:root { --container-max: 1200px; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 16px; }
