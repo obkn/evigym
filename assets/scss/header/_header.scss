@@ -1,0 +1,80 @@
+/* ================================
+ * Header / Navigation
+ * ================================ */
+header {
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger {
+  position: relative;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1001;
+
+  &__line {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: all 0.3s ease;
+
+    &--1 {
+      top: 0;
+    }
+
+    &--2 {
+      top: 10px;
+    }
+
+    &--3 {
+      top: 20px;
+    }
+  }
+
+  &__line--menu {
+    display: block;
+    font-family: "Cormorant", cursive;
+    font-size: 1.2rem;
+    color: #000;
+    margin-top: 36px;
+    text-align: center;
+  }
+}
+
+/* ✗アニメーション */
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.nav-open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* 背景オーバーレイ */
+.black-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.nav-open .black-bg {
+  opacity: 1;
+  visibility: visible;
+}

@@ -10,6 +10,9 @@
     <a href="/reserve/beginner" class="hajimete my-auto">初めての方へ</a>
     <a href="https://enjoy.evigym.com/home" target="_blank" class="yoyaku my-auto">会員ログイン</a>
   </div>
+
+  <?php get_template_part('template-parts/header/nav-global'); ?>
+
   <div class="hamburger js-hamburger">
     <span class="hamburger__line hamburger__line--1"></span>
     <span class="hamburger__line hamburger__line--2"></span>
