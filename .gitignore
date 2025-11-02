@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+assets/dist/
+*.map
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# WordPress noise（必要なら）
+*.log
