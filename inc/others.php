@@ -56,3 +56,26 @@ add_filter('tiny_mce_before_init', function ($initArray) {
   ]);
   return $initArray;
 });
+
+/**
+ * コメント機能を完全に無効化（メニュー・投稿タイプ・REST含む）
+ */
+add_action('admin_menu', function () {
+  remove_menu_page('edit-comments.php'); // 左メニューから「コメント」を削除
+});
+
+add_action('init', function () {
+  // コメント・トラックバックのサポートを全投稿タイプから削除
+  foreach (get_post_types() as $post_type) {
+    remove_post_type_support($post_type, 'comments');
+    remove_post_type_support($post_type, 'trackbacks');
+  }
+
+  // コメントフィードを無効化
+  add_filter('feed_links_show_comments_feed', '__return_false');
+});
+
+// コメントフォームとフィードを強制無効化
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+add_filter('comments_array', '__return_empty_array', 10, 2);
