@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="レイヤー_1"
+   data-name="レイヤー 1"
+   viewBox="0 0 272.75 44.92"
+   version="1.1"
+   sodipodi:docname="btn-line.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.1680458"
+     inkscape:cx="139.83384"
+     inkscape:cy="22.569118"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="レイヤー_1"
+     showgrid="false" />
+  <defs
+     id="defs5">
+    <rect
+       x="6.0263912"
+       y="10.267185"
+       width="180.79174"
+       height="26.114362"
+       id="rect2" />
+    <rect
+       x="5.1335925"
+       y="9.5975859"
+       width="189.94292"
+       height="27.00716"
+       id="rect1" />
+    <rect
+       x="7.3655892"
+       y="7.8119885"
+       width="156.90937"
+       height="28.346358"
+       id="rect12" />
+    <rect
+       x="10.267185"
+       y="9.8207856"
+       width="149.99018"
+       height="27.45356"
+       id="rect11" />
+    <style
+       id="style1">.cls-1{fill:url(#名称未設定グラデーション_4);}.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.99px;}.cls-2,.cls-3{stroke:#fff;}.cls-3{fill:#fff;stroke-width:0.28px;}</style>
+    <linearGradient
+       id="名称未設定グラデーション_4"
+       y1="22.46"
+       x2="272.75"
+       y2="22.46"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#da719f"
+         id="stop1" />
+      <stop
+         offset="0.03"
+         stop-color="#da719b"
+         id="stop2" />
+      <stop
+         offset="0.49"
+         stop-color="#dd6b5d"
+         id="stop3" />
+      <stop
+         offset="0.82"
+         stop-color="#df6837"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#e06728"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <rect
+     class="cls-1"
+     width="272.75"
+     height="44.92"
+     id="rect5" />
+  <polyline
+     class="cls-2"
+     points="169.98 24.78 236.64 24.78 223.21 17.55"
+     id="polyline5"
+     transform="matrix(0.70093693,0,0,1.0210853,86.470452,-0.44627094)" />
+  <text
+     xml:space="preserve"
+     id="text1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);opacity:1;fill:#ffffff"
+     transform="translate(45.309534,0.89279869)"><tspan
+       x="6.0273438"
+       y="28.642611"
+       id="tspan1">LINEで予約する</tspan></text>
+</svg>

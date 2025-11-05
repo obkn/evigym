@@ -1,0 +1,277 @@
+/* ==========================================================================
+ * evigym: top-inline.css (fixed)
+ * Notes:
+ * - Keep selectors as-is to preserve cascade.
+ * - Fixed missing closing brace in .storeBlogs-top .slideBtn.ac:after.
+ * ========================================================================== */
+/* ---- Inline block #1 ---- */
+body, html {
+  overflow-x: hidden !important;
+}
+.swiper-wrapper {
+  position: unset !important;
+}
+.swiper-pointer-events {
+  overflow: hidden;
+}
+.blog-list_item {
+  padding-left: 25px !important;
+  padding-right: 50px !important;
+}
+
+.storeBlogs-top > .slideBtn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #c1c1c1;
+}
+.storeBlogs-top > dd {
+  margin: 0;
+  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.storeBlogs-top .slideBtn {
+  position: relative;
+  cursor: pointer;
+}
+.storeBlogs-top .slideBtn:after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+}
+.storeBlogs-top .slideBtn.ac:after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  margin-top: 8px;
+} /* ← ここが欠けていた */
+
+/* Swiper item alignment */
+.point4Slide2 .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.swiper-slide .row {
+  position: relative;
+  z-index: 99;
+}
+
+.stores-top > .slideBtn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #c1c1c1;
+}
+.stores-top > dd {
+  margin: 0;
+  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.stores-top .slideBtn {
+  position: relative;
+  cursor: pointer;
+}
+.stores-top .slideBtn:after {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+}
+.stores-top .slideBtn.ac:after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 0;
+  border-bottom: 0;
+  width: 15px;
+  right: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  margin-top: 8px;
+}
+
+.point4-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.point4-slider-wrapper h3 {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #383838;
+}
+.point4-slider_item {
+  max-width: 649px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .point4-slider-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .point4-slider_item {
+    max-width: 595px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .point4-slider_item {
+    max-width: 395px;
+  }
+}
+
+.point4-slider-wrapper .next {
+  right: 0;
+  background: url(../../img/controls.webp) no-repeat -43px -32px;
+}
+.point4-slider-wrapper .prev {
+  left: 0;
+  background: url(../../img/controls.webp) no-repeat 0 -32px;
+}
+.point4-slider-wrapper .next,
+.point4-slider-wrapper .prev {
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  outline: 0;
+  text-indent: -9999px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.point_number_main { position: relative; }
+.point_number_2ndtext {
+  font-size: 10px;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+.point_number {
+  font-family: "Felix Titling";
+  font-size: 55px;
+  position: absolute;
+  top: -10px;
+  left: -35px;
+}
+
+.point-box-20 { margin-bottom: 20px !important; }
+.point-box-30 { margin-bottom: 30px !important; }
+.point-box-40 { margin-bottom: 40px !important; }
+
+@media screen and (max-width: 552px) {
+  #koyama h4 { font-size: 100% !important; }
+  #koyama h3 { font-size: 120% !important; }
+  #koyama p  { font-size: 90% !important; }
+  #koyama .mt-3 { margin-top: 0.3rem !important; }
+  #koyama .mt-4 { margin-top: 0.5rem !important; }
+}
+
+@media screen and (max-width: 430px) {
+  #Whatis { margin-bottom: 20px !important; }
+  #Point h5 { font-size: 100% !important; }
+  #Whatis h3 { font-size: 100% !重要; }
+  #Whatis p  { font-size: 75% !important; }
+
+  #Point h5 { font-size: 100% !important; }
+  #Point h3 { font-size: 100% !important; }
+  #Point p  { font-size: 75% !important; }
+
+  #koyama h4 { font-size: 80% !important; }
+  #koyama h3 { font-size: 90% !important; }
+  #koyama p  { font-size: 60% !important; }
+  #koyama .mt-3 { margin-top: 0.3rem !important; }
+  #koyama .mt-4 { margin-top: 0.5rem !important; }
+}
+
+@media screen and (max-width: 340px) {
+  #Whatis h3 { font-size: 80% !important; }
+  #Whatis p  { font-size: 60% !important; }
+  #Point h5  { font-size: 86% !important; }
+  #Point h3  { font-size: 80% !important; }
+  #Point p   { font-size: 60% !important; }
+}
+
+/* @media screen and (max-width: 1237px) {
+  .container { margin-top: 60px !important; }
+} */
+
+@media screen and (max-width: 575px) {
+  .custom-button.int-btn {
+    max-width: 380px !important;
+    height: 56px;
+    line-height: 55px;
+    margin-top: 6px;
+  }
+  .int-hr { margin-bottom: 10px !important; }
+  .sp-sml { margin-top: 0 !important; }
+  .point4-slider-wrapper .prev {
+    transform: scale(0.7);
+    left: -5px;
+  }
+  .point4-slider-wrapper .next {
+    transform: scale(0.7);
+    right: -5px;
+  }
+  .interview-list [class*="col"] {
+    margin-bottom: 0 !important;
+  }
+  .point4-slider-wrapper .point4Slide2 .swiper-wrapper .swiper-slide .name {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 17px;
+  }
+  .point4-slider-wrapper .point4Slide2 .swiper-wrapper .swiper-slide .title {
+    line-height: 18px;
+  }
+  .point4-slider-wrapper .point4Slide2 .swiper-wrapper .swiper-slide a .img {
+    margin-bottom: 5px;
+  }
+}
+
+/* ---- Inline block #2 ---- */
+.custom-button.d-block.d-sm-none span::after {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 10px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: translateY(-50%) skewX(45deg);
+}
+.custom-button-inner::after {
+  display: none !important;
+}
+
+/* ---- Inline block #3 ---- */
+.js-animation {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

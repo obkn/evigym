@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+  scroll-padding-top: 100px; /* 固定ヘッダの高さ分 */
+}
+
+#covid{position: absolute;top: 80px;width:100%;font-size:110%;z-index: 55;}
+body.page .mainvisual{margin-top: 80px;}
+
+.header-space{margin-top: 80px;}
+
+.bg311301{background:#311301;}
+.bgffffff{background:#ffffff;}
+
+.img-btn img{max-width:420px;}
+.container.mt0{margin-top:0;}
+
+
+
+/* .js-animation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+.js-animation.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+} */
+
+.imgWrap{
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+}
+.imgWrap img {
+	display: block;
+	transition: 0.8s;
+}
+.imgWrap img:hover {
+	transform: scale(1.10);	/*画像の拡大率*/
+}
+
+.text-focus-in {
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+body#home h3{font-size:140%;}
+body#home .main-visual{
+	background:url(/wp-content/themes/evigym/assets/static/img//top/mv_pc.webp) no-repeat;
+	background-size: cover;
+	background-position: center top 30px;
+	}
+@media screen and (max-width: 1237px) {
+    body#home .main-visual {
+        background-size: cover;
+    }
+}
+
+body#home .main-visual .container{
+	height: 100vh;
+	position: relative;
+	z-index:1;
+	margin:0 auto;
+	}
+
+.access-txt{
+	background:rgb(0,0,0,0.4);
+	text-align:center;
+	position: relative;
+	z-index:3;
+	margin-top:-49px;
+	padding:12px 0;
+	color:#fff;
+	font-size:95%;
+}
+
+@media screen and (max-width: 767px) {
+	body#home .main-visual .container{
+		height: calc(100vw * 1.39);
+	}
+	body#home .main-visual {
+		background-image: url(/wp-content/themes/evigym/assets/static/img//top/mv_sp.webp);
+	}
+	.access-txt {
+		margin-top: -86px;
+	}
+	body#home .main-visual p img{
+		width: 98px !important;
+	}
+}
+
+body#home .main-visual p{
+	position: absolute;
+    bottom: 110px;
+    right: 10px;
+    z-index:2;
+	}
+body#home .main-visual p img{width:140px;}
+
+body#home .main-visual h2{
+	position: absolute;
+    top: 110px;
+    right: 16px;
+    line-height: 1.2;
+	z-index:3;
+	text-align: right;
+}
+body#home .main-visual h2 img {
+	width: 50%;
+}
+@media screen and (max-width: 767px) {
+	body#home .main-visual h2{
+		right: 8px;
+	}
+	body#home .main-visual h2 img {
+		width: 60%;
+	}
+}
+@media screen and (max-width: 560px) {
+	body#home .main-visual h2{
+		line-height: 1;
+		text-align: right;
+	}
+	body#home .main-visual h2 img {
+		width: 64%;
+	}
+}
+
+.access-txt img{
+	width:18px;
+	margin-right:8px;
+}
+
+#stk{
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+	top: 0;
+	}
+
+.stk-up{position: sticky;
+	position: -webkit-sticky; /* Safari */
+	}
+
+
+.anniversary{
+	background:rgb(111,87,49,0.4);
+	padding:20px 0;
+	}
+
+
+section#Point .point-box,
+section#personal .point-box{
+	margin-bottom:60px;
+}
+section#Point .point-box.mb0, section#personal .point-box.mb0 { margin-bottom: 0; }
+
+section#Point .point-box h3{color:#311301;}
+section#Point .point-box h3 img{width:60px;margin-right:5px;}
+section#Point .point-box h5{font-size:130%;}
+section#Point .point-box img.image-photo{padding:0 10% 20px;}
+section#personal .point-box h3{color:#311301;}
+section#personal .point-box h3 img{width:60px;margin-right:5px;}
+section#personal .point-box h5{font-size:130%;}
+section#personal .point-box img.image-photo{padding:0 10% 20px;}
+main .row h2.font-L{font-size:180%;}
+
+section#News ul{margin-top:-20px;}
+section#News ul li{border:0;padding:10px 0 20px 0;}
+section#News p,section#News h6{color:#595757;}
+section#News h6{line-height:160%;}
+section#News p{font-size:100%;}
+
+body#home section#News p{font-size:70%;margin-top:5px;}
+
+body#stores-top #stores-menu ul{display:flex;margin-bottom:50px;}
+body#stores-top #stores-menu ul li{border-left:1px solid #666;line-height:160%;width:20%;}
+body#stores-top #stores-menu ul li:last-child{border-right:1px solid #666;}
+body#stores-top #stores-menu ul li a{display:block;padding:0 5px;text-align:center;}
+body#stores-top .swiper-slide .row{padding:0 30px;}
+
+@media only screen and (max-width:400px){
+	body#stores-top #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 8px !important;}
+}
+@media only screen and (max-width:290px){
+	body#stores-top #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 6px !important;}
+}
+@media only screen and (max-width:230px){
+	body#stores-top #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 4px !important;}
+}
+
+body#home #stores-menu ul{display:flex;margin-bottom:50px;}
+body#home #stores-menu ul li{border-left:1px solid #666;line-height:160%;width:20%;}
+body#home #stores-menu ul li:last-child{border-right:1px solid #666;}
+body#home #stores-menu ul li a{display:block;padding:0 5px;text-align:center;}
+body#home #stores-menu .swiper-slide .row{padding:0 30px;}
+
+@media only screen and (max-width:400px){
+	body#home #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 8px !important;}
+}
+@media only screen and (max-width:290px){
+	body#home #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 6px !important;}
+}
+@media only screen and (max-width:230px){
+	body#home #stores-menu ul li a{display:block;padding:0 5px;text-align:center;font-size: 4px !important;}
+}
+
+body#home .slideBtn {margin-right: -200px;}
+@media only screen and (max-width:1330px){
+	body#home .slideBtn {margin-right: -100px;}
+}
+@media only screen and (max-width:1100px){
+	body#home .slideBtn {margin-right: -70px;}
+}
+@media only screen and (max-width:1020px){
+	body#home .slideBtn {margin-right: -40px;}
+}
+@media only screen and (max-width:900px){
+	body#home .slideBtn {margin-right:0px;}
+}
+
+#all-stores .row.name h4{font-size:100%;text-align:center;}
+
+#Trainers .row .bx-wrapper .bx-prev {margin-left:-30px;}
+#Trainers .row .bx-wrapper .bx-next {margin-right:-30px;}
+#Trainers .swiper-slide span{
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    background: #D76110;
+    padding: 5px 8px;
+    border-radius: 5px;}
+
+section#Reserve .row .panel dt h3{display: contents;font-size:100%;padding-right:30px;}
+section#Note .row .col-11 h3{border-bottom: 1px dotted #c1c1c1;padding-bottom:5px;}
+
+#reserve .row p {margin-bottom: 0px;}
+#reserve a img.icon-line{max-width:60px;margin-top:10px;}
+#reserve a img.icon-evigym{/*max-width:200px;*/margin-top:10px;}
+#reserve dd.beginner h4{margin-top:5px;}
+
+
+body#online .point-box div{text-align:center;}
+body#online .point-box #point01-img img{width:32%}
+body#online hr.w100{width:100px;margin: auto;}
+
+body#online #online-hit{width:30%;text-align:center;}
+body#online #online-hit img{width:32%;}
+body#online img.cardvar{width:70%;}
+body#online #goods img{max-width:100px;float:left;margin-right:6px;margin-bottom:20px;}
+body#online #goods h5,body#online #goods p{text-align:left;font-size: 100%;}
+body#online  #online-info h4,body#online  #online-info p{text-align:center;}
+.border1{border:1px solid #eee;}
+.mw320{max-width:320px;}
+.mw560{max-width:560px;}
+
+.movie-wrap {
+	position: relative;
+	padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+	height: 0;
+	overflow: hidden;
+	margin:10px auto 15px;
+}
+
+.movie-wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body#plan .re-plan h2{text-align:left;font-size:150%;text-indent:5px;}
+body#plan .re-plan hr{margin-top:5px;border-top: 1px solid rgba(0,0,0,.5);}
+body#plan #privilege.re-plan .col-4{padding-right:0;}
+body#plan #privilege.re-plan h4 font-size:110%;{}
+body#plan .re-plan .box{padding:5px 15px 15px;border:1px solid #ccc;margin-top:15px;}
+body#plan .re-plan .boxgray{padding:15px;background:#fefefe;margin:0;margin-bottom:20px;}
+
+
+.tab_container {
+ margin: 0 auto;
+ max-width:980px ;}
+
+.tab_item {
+ width: calc(100%/2);
+ padding:20px ;
+ background-color: #e9e4df;
+ text-align: center;
+ color: #211800 ;
+ display: block;
+ float: left;
+ text-align: center;
+ font-weight: bold;
+ font-size:140%;
+ line-height:140%;
+}
+
+.tab_container .tab_item .tab-icon{width:32px;height:26px;float:left;background:url(/wp-content/themes/evigym/assets/static/img//plan/tab-01.svg) no-repeat center center;}
+.tab_container input:checked + .tab_item .tab-icon{width:32px;height:26px;float:left;background:url(/wp-content/themes/evigym/assets/static/img//plan/tab-02.svg) no-repeat center center;}
+
+input[name="tab_item"] {
+ display: none;
+}
+
+
+
+.tab_content {
+ display: none;
+ padding: 1em 0 0;
+ clear: both;
+ overflow: hidden;
+}
+#tab1:checked ~ #tab1_content,
+#tab2:checked ~ #tab2_content{
+ display: block;
+}
+
+.tab_container input:checked + .tab_item:after {
+   top: 99%;
+   left: 50%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-top-color: #453115;
+   border-width: 14px;
+   margin-left: -14px;
+}
+
+.tab_container input:checked + .tab_item {
+ background-color: #453115;
+ color: #fff;
+ position: relative;
+}
+
+
+#oyamahistry{max-width:420px;}
+
+
+/*========▼▼media Q　PC▼▼========*/
+
+@media screen and (min-width:979px) {
+
+	}
+@media screen and (min-width:581px) {
+
+	}
+
+/*========▼▼media Q　スマホ▼▼========*/
+
+
+
+@media only screen and (max-width:980px){
+
+
+	}
+
+@media only screen and (max-width:767px){
+	#stk { position: relative; z-index: 0;}
+
+	#covid{font-size:90%;}
+	body#stores-top .swiper-slide .row{padding:0px;}
+	body#stores-top .bx-wrapper .bx-controls-direction a {top:20%;}
+
+			body#stores-top #stores-menu ul{ display: inline;margin-bottom:20px;}
+			body#stores-top #stores-menu ul li {
+					    display: inline-block;
+					    border: 1px solid #666;
+					    width: 30%;
+					    margin-bottom: 10px;
+					    padding: 5px 0;
+					    font-size: 90%;
+					}
+	body#stores-top #stores-menu ul li.ee{padding-top:0px;}
+
+
+	body#home  #stores-menu .swiper-slide .row{padding:0px;}
+	body#home  #stores-menu .bx-wrapper .bx-controls-direction a {top:20%;}
+
+	body#home #stores-menu ul{ display: inline;margin-bottom:20px;}
+	body#home #stores-menu ul li {
+		display: inline-block;
+		border: 1px solid #666;
+		width: 30%;
+		margin-bottom: 10px;
+		padding: 5px 0;
+		font-size: 90%;
+	}
+	body#home #stores-menu ul li.ee{padding-top:0px;}
+
+	body#online .point-box p,body#online .point-box h5{text-align:left;}
+	body#online #online-hit p{text-align:left;}
+	body#online img.cardvar{width:100%;}
+	body#online  #online-info h4,body#online  #online-info p{text-align:left;}
+
+	section#Point .point-box img.image-photo {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	body#plan .re-plan hr{width:100%;margin-left:-15px;width:105%;}
+
+	.tr-name{text-align:center;}
+}
+
+
+@media only screen and (max-width:575px){
+	body#stores-top .swiper-slide .row h3{text-align:center;}
+	body#home  #stores-menu .swiper-slide .row h3{text-align:center;}
+
+		body#online .point-box #point01-img img{width:48%}
+
+		#all-stores .row.name h4{font-size:13px;}
+
+		#covid {top: 77px;}
+		body.page .mainvisual{margin-top: 77px;}
+
+		.header-space{margin-top: 77px;}
+
+		.tab_item {text-align: left;}
+}
+
+@media only screen and (max-width:321px){
+    .tab_item {    font-size: 120%;padding:15px 8px;}}
+
+
+

@@ -56,7 +56,7 @@ function clean() {
 // BrowserSync
 function serve() {
   browserSync.init({
-    proxy: process.env.EVIGYM_WP_URL || 'http://evigym.local',
+    proxy: process.env.EVIGYM_WP_URL || 'http://evigym2.local',
     open: false,
     notify: false
   });
