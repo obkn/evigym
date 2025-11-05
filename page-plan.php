@@ -7,9 +7,7 @@
 
 get_header();
 
-// 画像などのアセットURLを簡単に書けるようにヘルパー
 $asset = function ($path) {
-  // 例: /assets/img/... を想定（リポジトリに assets ディレクトリあり）
   return esc_url(get_template_directory_uri() . '/assets/static/' . ltrim($path, '/'));
 };
 ?>
