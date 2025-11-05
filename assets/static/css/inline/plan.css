@@ -1,0 +1,66 @@
+.plan-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 10px 20px;
+    background: #F7F7F6;
+}
+.planSlider {
+    overflow: hidden;
+}
+.plan-slider-wrapper .title {
+    text-align: center;
+}
+.plan-slider-wrapper h3 {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border-bottom: 1px solid #383838;
+}
+.plan-slider_item {
+    max-width: 653px;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .plan-slider_item {
+        max-width: 560px;
+    }
+    .plan-slider_item img {
+        max-width: 443px;
+    }
+}
+@media screen and (max-width: 424px) {
+    .plan-slider-wrapper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .plan-slider_item {
+        max-width: 433px
+    }
+}
+.plan-slider-wrapper .next {
+    right: 0px;
+    background: url(/img/controls.webp) no-repeat -43px -32px;
+}
+.plan-slider-wrapper .prev {
+    left: 0px;
+    background: url(/img/controls.webp) no-repeat 0 -32px;
+}
+.plan-slider-wrapper .next,
+.plan-slider-wrapper .prev {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+    cursor: pointer;
+}

@@ -5,9 +5,6 @@
  */
 get_header();
 
-/**
- * 便利関数: 最初のターム名を取得（なければ空文字）
- */
 function evigym_first_term_name($post_id, $taxonomy)
 {
   $terms = get_the_terms($post_id, $taxonomy);
@@ -40,7 +37,7 @@ function evigym_first_term_name($post_id, $taxonomy)
         <div class="col-12 col-md-4 pt10" align="center">
           <img decoding="async" src="/wp-content/uploads/2024/11/14万人突破初回体験0円.png" alt="キャンペーン" />
           <div class="mt20 img-btn pb10 imgWrap">
-            <a href="<?php echo esc_url(home_url('/reserve/beginner/')); ?>">
+            <a href="/reserve/beginner/">
               <img decoding="async" style="max-width: 380px;" src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-kuwashiku-off.svg" alt="詳しくはこちら" />
             </a>
           </div>
@@ -50,7 +47,7 @@ function evigym_first_term_name($post_id, $taxonomy)
       <section id="Whatis">
         <div class="container">
           <div class="mt40">
-            <a href="<?php echo esc_url(home_url('/news/23training-safety-policy/')); ?>" target="_blank">
+            <a href="/news/23training-safety-policy/" target="_blank">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/bnr-safety-consideration.webp" alt="コロナ対策" width="980" height="326">
             </a>
           </div>
@@ -91,7 +88,7 @@ function evigym_first_term_name($post_id, $taxonomy)
               <img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/top/point1.webp" class="image-photo" width="1000" height="665" alt="point">
               <p class="mt15 mb20 text-left">エビジムではお客様の目標やお悩みの丁寧なカウンセリングだけでなく、現在の身体の状態を診断し、トレーニングを組み立てることを大切にしています。無理なく目標をかなえられるように、診断をもとにお客様に最適なメニューを提案しています。</p>
               <div class="mt20 img-btn imgWrap">
-                <a href="<?php echo esc_url(home_url('/trainers/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-trainers-off.svg" alt="トレーナーの紹介はこちら"></a>
+                <a href="/trainers/"><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-trainers-off.svg" alt="トレーナーの紹介はこちら"></a>
               </div>
             </div>
           </div>
@@ -109,7 +106,7 @@ function evigym_first_term_name($post_id, $taxonomy)
               <img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/top/point2.webp" class="image-photo" width="634" height="423" alt="point">
               <p class="mt15 text-left">エビジムではトレーニング研修・実技指導を常に実施しています。姿勢・骨格の歪み・運動状況・ストレスなど、お客様ひとりひとりで身体の状況は異なります。すべてのお客様に最適なトレーニングを提供できるよう、スタッフ一同サポートします。</p>
               <div class="mt20 img-btn imgWrap">
-                <a href="<?php echo esc_url(home_url('/interview/014/')); ?>"><img style="max-width: 380px;" src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-kuwashiku-off.svg" alt="詳しくはこちら"></a>
+                <a href="/interview/014/"><img style="max-width: 380px;" src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-kuwashiku-off.svg" alt="詳しくはこちら"></a>
               </div>
             </div>
           </div>
@@ -282,7 +279,7 @@ function evigym_first_term_name($post_id, $taxonomy)
             <div class="row">
               <div class="col-11 col-md-6 mb30">
                 <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/top/advantage07.png" alt="食生活" width="600" height="120"></h3>
-                <p>セッション時に無料で食事アドバイスをご提供！<br>毎日管理が必要な方には有料オプション有り。<br><a href="<?php echo esc_url(home_url('/howto-training/dietary-counselling/')); ?>" rel="noopener noreferrer">＼詳しくはコチラ／</a></p>
+                <p>セッション時に無料で食事アドバイスをご提供！<br>毎日管理が必要な方には有料オプション有り。<br><a href="/howto-training/dietary-counselling/" rel="noopener noreferrer">＼詳しくはコチラ／</a></p>
               </div>
               <div class="col-11 col-md-6 mb30">
                 <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/top/advantage08.png" alt="レンタルウェア" width="600" height="120"></h3>
@@ -521,7 +518,7 @@ function evigym_first_term_name($post_id, $taxonomy)
 
             <div class="row mt20 mb-0">
               <div class="col-12" align="center">
-                <a href="<?php echo esc_url(home_url('/blog/')); ?>" class="btn">
+                <a href="/blog/" class="btn">
                   <h4>トレーナーブログはコチラ＞＞</h4>
                 </a>
               </div>
@@ -688,7 +685,7 @@ function evigym_first_term_name($post_id, $taxonomy)
           <div class="row">
             <div class="col-12 col-sm-10">
               <div class="mt20 img-btn imgWrap sp-sml">
-                <a class="custom-button int-btn d-block" href="<?php echo esc_url(home_url('/interview/')); ?>" style="max-width: 440px;">
+                <a class="custom-button int-btn d-block" href="/interview/" style="max-width: 440px;">
                   <span class="custom-button-inner" style="font-size: 22px;">お客様の声一覧はこちら</span>
                 </a>
               </div>
@@ -768,7 +765,7 @@ function evigym_first_term_name($post_id, $taxonomy)
 
             <div class="row mt20 mb-0">
               <div class="col-12" align="center">
-                <a href="<?php echo esc_url(home_url('/blog/')); ?>" class="btn">
+                <a href="/blog/" class="btn">
                   <h4>トレーナーブログはコチラ＞＞</h4>
                 </a>
               </div>
@@ -812,7 +809,7 @@ function evigym_first_term_name($post_id, $taxonomy)
               </ul>
 
               <div class="mt20 img-btn imgWrap" align="center">
-                <a href="<?php echo esc_url(home_url('/news/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-readmore-off.svg" alt="Read more"></a>
+                <a href="/news/"><img src="<?php echo get_template_directory_uri(); ?>/assets/static/img/btn-readmore-off.svg" alt="Read more"></a>
               </div>
             </div>
           </div>

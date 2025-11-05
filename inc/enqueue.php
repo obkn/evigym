@@ -119,7 +119,7 @@ add_action('wp_enqueue_scripts', function () {
 
   wp_add_inline_script('evigym-main', $inline_js, 'after');
 
-  // --- TOP限定：Swiper を追加し、依存解決して inline を実行 ---
+  // --- TOP限定：Swiper v6 を追加し、依存解決して inline を実行 ---
   if (is_front_page()) {
     $css_rel = '/assets/static/css/inline/top.css';
     $js_rel  = '/assets/static/js/inline/top.js';
@@ -153,6 +153,52 @@ add_action('wp_enqueue_scripts', function () {
       $theme_uri . $js_rel,
       ['jquery', 'evigym-main', 'evigym-bxslider', 'evigym-swiper'],
       $js_ver,
+      true
+    );
+    // defer は付けない（依存＆フッター実行で順序担保）
+  }
+
+  // --- PLANページ限定：Swiper v8 と plan.css / plan.js ---
+  // 例）固定ページのスラッグが「plan」、またはテンプレートが「page-plan.php」のときに読み込み
+  if (is_page('plan') || is_page_template('page-plan.php')) {
+    $plan_css_rel = '/assets/static/css/inline/plan.css';
+    $plan_js_rel  = '/assets/static/js/inline/plan.js';
+
+    $plan_css_ver = file_exists($theme_dir . $plan_css_rel) ? filemtime($theme_dir . $plan_css_rel) : null;
+    $plan_js_ver  = file_exists($theme_dir . $plan_js_rel)  ? filemtime($theme_dir . $plan_js_rel)  : null;
+
+    // Swiper v8（要件に合わせてCDNをv8で読み込み）
+    wp_enqueue_style(
+      'evigym-swiper8',
+      'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+      [],
+      '8',
+      'all'
+    );
+    wp_enqueue_script(
+      'evigym-swiper8',
+      'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
+      [],
+      '8',
+      true
+    );
+    wp_script_add_data('evigym-swiper8', 'defer', true);
+
+    // PLAN専用 CSS（Swiper v8 の後に）
+    wp_enqueue_style(
+      'evigym-inline-plan',
+      $theme_uri . $plan_css_rel,
+      ['evigym-swiper8'],
+      $plan_css_ver,
+      'all'
+    );
+
+    // PLAN専用 JS（jQuery, メイン, bxSlider, Swiper v8 に依存）
+    wp_enqueue_script(
+      'evigym-inline-plan',
+      $theme_uri . $plan_js_rel,
+      ['jquery', 'evigym-main', 'evigym-bxslider', 'evigym-swiper8'],
+      $plan_js_ver,
       true
     );
     // defer は付けない（依存＆フッター実行で順序担保）
