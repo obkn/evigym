@@ -1,7 +1,10 @@
 <?php
-/* Template Name: Reserve (ご予約) */
+
+/**
+ * Template Name: Reserve
+ */
 get_header();
-$theme_uri = get_stylesheet_directory_uri();
+$static = get_template_directory_uri() . '/assets/static/img';
 ?>
 
 <main id="main">
@@ -9,8 +12,8 @@ $theme_uri = get_stylesheet_directory_uri();
 
   <div class="container">
     <ul id="breadcrumbs-one">
-      <li><a href="<?php echo esc_url(home_url('/')); ?>" alt="パーソナルトレーニングジムエビジム"><?php echo esc_html__('ホーム', 'evigym'); ?></a></li>
-      <li><a href="" class="current"><?php echo esc_html__('ご予約方法', 'evigym'); ?></a></li>
+      <li><a href="/">パーソナルジムeviGym</a></li>
+      <li><a href="" class="current">ご予約方法</a></li>
     </ul>
   </div>
 
@@ -18,7 +21,7 @@ $theme_uri = get_stylesheet_directory_uri();
     <div class="container">
       <div class="row">
         <div class="col-12 tit js-animation" align="center">
-          <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve.webp'); ?>" alt="Reserve">
+          <img src="<?php echo esc_url($static . '/reserve.webp'); ?>" alt="Reserve">
           <h2>ご予約について</h2>
           <hr>
         </div>
@@ -44,7 +47,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 <div class="col-12 col-xs-11">
                   <div class="row mb30">
                     <div class="col-3 col-xs-2 col-sm-2 col-md-1 pr0">
-                      <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step01.webp'); ?>" alt="">
+                      <img src="<?php echo esc_url($static . '/reserve/step01.webp'); ?>" alt="">
                     </div>
                     <div class="col-9 col-xs-10 col-sm-10 col-md-11">
                       <h4>eviGymの会員登録</h4>
@@ -57,21 +60,21 @@ $theme_uri = get_stylesheet_directory_uri();
                       LINEで友達登録
                       <hr class="m10">
                       <small>LINEで友達登録を実施</small><br>
-                      <a href="https://lin.ee/o8z7iZZ" target="_blank" class="sp-none"><img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step01-line.webp'); ?>" class="icon-line" alt="LINE"></a>
-                      <a href="https://lin.ee/o8z7iZZ" target="_blank" class="pc-none"><img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step01-line.webp'); ?>" class="icon-line" alt="LINE"></a>
+                      <a href="https://lin.ee/o8z7iZZ" target="_blank" class="sp-none"><img src="<?php echo esc_url($static . '/reserve/step01-line.webp'); ?>" class="icon-line" alt="LINE"></a>
+                      <a href="https://lin.ee/o8z7iZZ" target="_blank" class="pc-none"><img src="<?php echo esc_url($static . '/reserve/step01-line.webp'); ?>" class="icon-line" alt="LINE"></a>
                     </div>
                     <div class="col-6 col-md-5">
                       WEBから登録
                       <hr class="m10">
                       <small>ウェブサイトで会員登録</small><br>
-                      <a href="<?php echo esc_url(home_url('/register')); ?>" target="_blank"><img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step01-logo.webp'); ?>" class="icon-evigym" alt="eviGym"></a>
+                      <a href="/register" target="_blank"><img src="<?php echo esc_url($static . '/reserve/step01-logo.webp'); ?>" class="icon-evigym" alt="eviGym"></a>
                     </div>
                   </div>
                   <hr>
 
                   <div class="row">
                     <div class="col-3 col-xs-2 col-sm-2 col-md-1 pr0">
-                      <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step02.webp'); ?>" alt="">
+                      <img src="<?php echo esc_url($static . '/reserve/step02.webp'); ?>" alt="">
                     </div>
                     <div class="col-9 col-xs-10 col-sm-10 col-md-11">
                       <h4>日時＆店舗を選択</h4>
@@ -81,18 +84,18 @@ $theme_uri = get_stylesheet_directory_uri();
 
                   <div class="row mt20">
                     <div class="col-11 col-sm-6 col-md-4">
-                      <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/r-flow01.webp'); ?>" alt="">
+                      <img src="<?php echo esc_url($static . '/reserve/r-flow01.webp'); ?>" alt="">
                     </div>
                     <div class="col-11 col-sm-6 mt10">
                       <h4>予約希望の日時を選択</h4>
-                      <p><a href="<?php echo esc_url(home_url('/booking/new')); ?>" target="_blank"><?php echo esc_html(home_url('/booking/new')); ?></a><br><br>
+                      <p><a href="/booking/new" target="_blank"><?php echo esc_html(home_url('/booking/new')); ?></a><br><br>
                         ご希望のA)店舗（実店舗 or オンライン）、B)トレーナー(任意)、E)日時を選び、「この内容で予約を進める」ボタンをクリック。<br><br>
                         A) 店舗選択（実店舗 or オンライン）<br>
                         B) トレーナー選択<br>
                         C) カレンダー<br>
                         D）日付移動<br>
                         E）希望日選択<br><br>
-                        店舗一覧は <a href="<?php echo esc_url(home_url('/stores')); ?>">こちら</a>
+                        店舗一覧は <a href="/stores">こちら</a>
                       </p>
                     </div>
                   </div>
@@ -101,7 +104,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                   <div class="row">
                     <div class="col-3 col-xs-2 col-sm-2 col-md-1 pr0">
-                      <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step03.webp'); ?>" alt="">
+                      <img src="<?php echo esc_url($static . '/reserve/step03.webp'); ?>" alt="">
                     </div>
                     <div class="col-9 col-xs-10 col-sm-10 col-md-11">
                       <h4>初回料金の決済</h4>
@@ -116,7 +119,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                   <div class="row">
                     <div class="col-3 col-xs-2 col-sm-2 col-md-1 pr0">
-                      <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/step04.webp'); ?>" alt="">
+                      <img src="<?php echo esc_url($static . '/reserve/step04.webp'); ?>" alt="">
                     </div>
                     <div class="col-9 col-xs-10 col-sm-10 col-md-11">
                       <h4>初回体験</h4>
@@ -133,10 +136,10 @@ $theme_uri = get_stylesheet_directory_uri();
               <h3><i class="icon-member"></i>定期コース入会済みの方へ</h3>
             </dt>
             <dd>
-              <p><a href="<?php echo esc_url(home_url('/mypage')); ?>" target="_blank">マイページ</a>へログインしていただきトレーニング予約ページよりご希望の店舗、日時を選択し予約申請をお願いします。<br>
-                ※先に空き状況をご確認したい場合は<a href="<?php echo esc_url(home_url('/booking/new')); ?>" target="_blank">こちら</a>からでもご確認いただけます。<br>
+              <p><a href="/mypage" target="_blank">マイページ</a>へログインしていただきトレーニング予約ページよりご希望の店舗、日時を選択し予約申請をお願いします。<br>
+                ※先に空き状況をご確認したい場合は<a href="/booking/new" target="_blank">こちら</a>からでもご確認いただけます。<br>
                 ※申請時点では予約確定ではございません。予約確定のメールをもって確定となりますのでご留意ください。<br><br>
-                疑問・質問は、<a href="<?php echo esc_url(home_url('/contact#Questions')); ?>">よくある質問</a>にて確認いただけます。
+                疑問・質問は、<a href="/contact#Questions">よくある質問</a>にて確認いただけます。
               </p>
 
               <?php echo do_shortcode('[contact-form-7 id="795987f" title="コース変更、休会、退会申請フォーム" html_id="form"]'); ?>
@@ -156,7 +159,7 @@ $theme_uri = get_stylesheet_directory_uri();
                 上記のご希望の店舗をクリックいただき、トレーニング日時を選択、いただき予約申請をお願いします。<br>
                 ※申請時点では予約確定ではございません。予約確定のメールをもって確定となりますのでご留意ください。<br>
                 ※クーポンサイトご利用の方は、都度（1回毎）でのご予約をお願いしております。<br><br>
-                疑問・質問は、<a href="<?php echo esc_url(home_url('/contact#Questions')); ?>">よくある質問</a>にて確認いただけます。
+                疑問・質問は、<a href="/contact#Questions">よくある質問</a>にて確認いただけます。
               </p>
             </dd>
 
@@ -164,9 +167,9 @@ $theme_uri = get_stylesheet_directory_uri();
               <h3><i class="icon-revival"></i>以前エビジムをご利用されていたお客様へ</h3>
             </dt>
             <dd>
-              <p><a href="<?php echo esc_url(home_url('/contact')); ?>" target="_blank">お問い合わせフォーム</a>より「おかえり割引き」または「再入会の方」をお選びいただき、ご希望のコースを記載の上、送信ください。<br>
+              <p><a href="/contact" target="_blank">お問い合わせフォーム</a>より「おかえり割引き」または「再入会の方」をお選びいただき、ご希望のコースを記載の上、送信ください。<br>
                 担当者より折り返しご連絡いたします。<br><br>
-                疑問・質問は、<a href="<?php echo esc_url(home_url('/contact#Questions')); ?>">よくある質問</a>にて確認いただけます。
+                疑問・質問は、<a href="/contact#Questions">よくある質問</a>にて確認いただけます。
               </p>
             </dd>
           </dl>
@@ -179,7 +182,7 @@ $theme_uri = get_stylesheet_directory_uri();
     <div class="container" id="flow">
       <div class="row">
         <div class="col-12 tit js-animation" align="center">
-          <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow.webp'); ?>" alt="Flow">
+          <img src="<?php echo esc_url($static . '/flow.webp'); ?>" alt="Flow">
           <h2>ご利用の流れ</h2>
           <hr>
         </div>
@@ -195,7 +198,7 @@ $theme_uri = get_stylesheet_directory_uri();
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow/no03.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/flow/no03.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>1：予約当日</h3>
@@ -212,7 +215,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow/no04.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/flow/no04.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>2：受付</h3>
@@ -226,7 +229,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow/no05.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/flow/no05.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>3：カウンセリング</h3>
@@ -240,7 +243,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow/no06.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/flow/no06.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>4：トレーニング</h3>
@@ -257,7 +260,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/flow/no07.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/flow/no07.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>5：今後の方針の確認</h3>
@@ -303,7 +306,7 @@ $theme_uri = get_stylesheet_directory_uri();
                       <p><span class="red">キャンセル・ご予約変更期限は<b>24時間前</b>までです。</span><br>
                         24時間前のキャンセル・変更は予約システムよりご対応お願いいたします。<br>
                         24時間を切ってのキャンセル・変更は1回分チケット消化（ご返金不可）となります。
-                        その際、<a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせフォーム</a>より「24時間を切ってのご予約キャンセル」をお選びいただき、項目に記載の上、送信ください。ご協力お願いします。<br>
+                        その際、<a href="/contact">お問い合わせフォーム</a>より「24時間を切ってのご予約キャンセル」をお選びいただき、項目に記載の上、送信ください。ご協力お願いします。<br>
                       </p>
                       <br><br>
 
@@ -329,7 +332,7 @@ $theme_uri = get_stylesheet_directory_uri();
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/online-01.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/reserve/online-01.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>1：予約当日</h3>
@@ -346,7 +349,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/online-02.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/reserve/online-02.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>2：受付</h3>
@@ -361,7 +364,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/online-03.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/reserve/online-03.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>3：カウンセリング</h3>
@@ -375,7 +378,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/online-04.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/reserve/online-04.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>4：トレーニング</h3>
@@ -392,7 +395,7 @@ $theme_uri = get_stylesheet_directory_uri();
 
                 <div class="row">
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                    <img src="<?php echo esc_url($theme_uri . '/assets/static/img/reserve/online-05.webp'); ?>" alt="">
+                    <img src="<?php echo esc_url($static . '/reserve/online-05.webp'); ?>" alt="">
                   </div>
                   <div class="col-12 col-sm-8 col-md-8 col-lg-8">
                     <h3>5：今後の方針の確認</h3>
@@ -436,7 +439,7 @@ $theme_uri = get_stylesheet_directory_uri();
                       <p><span class="red">キャンセル・ご予約変更期限は<b>24時間前</b>までです。</span><br>
                         24時間前のキャンセル・変更は予約システムよりご対応お願いいたします。<br>
                         24時間を切ってのキャンセル・変更は1回分チケット消化（ご返金不可）となります。
-                        その際、<a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせフォーム</a>より「24時間を切ってのご予約キャンセル」をお選びいただき、項目に記載の上、送信ください。ご協力お願いします。<br>
+                        その際、<a href="/contact">お問い合わせフォーム</a>より「24時間を切ってのご予約キャンセル」をお選びいただき、項目に記載の上、送信ください。ご協力お願いします。<br>
                       </p>
                       <br><br>
 

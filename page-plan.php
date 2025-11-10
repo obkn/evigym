@@ -2,22 +2,17 @@
 
 /**
  * Template Name: Plan Page
- * Description: 料金プランページ用テンプレート
  */
-
 get_header();
-
-$asset = function ($path) {
-  return esc_url(get_template_directory_uri() . '/assets/static/' . ltrim($path, '/'));
-};
+$static = get_template_directory_uri() . '/assets/static/img';
 ?>
 <main id="main">
   <div class="mainvisual mv05"></div>
 
   <div class="container">
     <ul id="breadcrumbs-one">
-      <li><a href="/" alt="パーソナルトレーニングジムエビジム"><?php echo esc_html__('ホーム', 'evigym'); ?></a></li>
-      <li><a href="" class="current"><?php echo esc_html__('料金プラン', 'evigym'); ?></a></li>
+      <li><a href="/">パーソナルジムeviGym</a></li>
+      <li><a href="" class="current">料金プラン</a></li>
     </ul>
   </div>
 
@@ -25,7 +20,7 @@ $asset = function ($path) {
     <div class="container">
       <div class="row">
         <div class="col-12 tit js-animation" align="center">
-          <img src="<?php echo $asset('img/plan.webp'); ?>" alt="Plan">
+          <img src="<?php echo esc_url($static . '/plan.webp'); ?>" alt="Plan">
           <h2>料金プラン紹介</h2>
           <hr>
         </div>
@@ -80,90 +75,90 @@ $asset = function ($path) {
             <div class="planSlider">
               <div class="plan-slider swiper-wrapper">
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/012">
+                  <a href="/interview/012/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_A-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_A-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_A-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_A-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/028">
+                  <a href="/interview/028/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_B-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_B-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_B-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_B-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/036">
+                  <a href="/interview/036/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_C-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_C-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_C-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_C-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/019">
+                  <a href="/interview/019/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_D-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_D-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_D-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_D-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/007">
+                  <a href="/interview/007/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_E-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_E-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_E-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_E-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/035">
+                  <a href="/interview/035/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_F-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_F-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_F-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_F-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/018">
+                  <a href="/interview/018/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_G-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_G-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_G-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_G-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/032">
+                  <a href="/interview/032/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_H-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_H-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_H-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_H-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/013">
+                  <a href="/interview/013/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_I-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_I-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_I-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_I-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/034">
+                  <a href="/interview/034/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_J-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_J-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_J-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_J-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
                 <div class="plan-slider_item swiper-slide">
-                  <a href="/interview/025">
+                  <a href="/interview/025/">
                     <picture>
-                      <source type="image/webp" srcset="<?php echo $asset('img/plan/training_schedule_K-2.webp'); ?>">
-                      <img src="<?php echo $asset('img/plan/training_schedule_K-2.jpg'); ?>" alt="" width="1000" height="1165">
+                      <source type="image/webp" srcset="<?php echo esc_url($static . '/plan/training_schedule_K-2.webp'); ?>">
+                      <img src="<?php echo esc_url($static . '/plan/training_schedule_K-2.jpg'); ?>" alt="" width="1000" height="1165">
                     </picture>
                   </a>
                 </div>
@@ -186,7 +181,7 @@ $asset = function ($path) {
 
               <div class="row boxgray">
                 <div class="col-4 col-sm-2 col-md-2">
-                  <img src="<?php echo $asset('img/plan/plan-icon01.webp'); ?>" alt="入会金無料！1カ月のみのお試しもOK">
+                  <img src="<?php echo esc_url($static . '/plan/plan-icon01.webp'); ?>" alt="入会金無料！1カ月のみのお試しもOK">
                 </div>
                 <div class="col-8 col-sm-10 col-md-10">
                   <h4>入会金無料！1カ月のみもＯＫ</h4>
@@ -196,7 +191,7 @@ $asset = function ($path) {
 
               <div class="row boxgray">
                 <div class="col-4 col-sm-2 col-md-2">
-                  <img src="<?php echo $asset('img/plan/plan-icon02.webp'); ?>" alt="ウォーターサーバーの冷水＆温水無料！">
+                  <img src="<?php echo esc_url($static . '/plan/plan-icon02.webp'); ?>" alt="ウォーターサーバーの冷水＆温水無料！">
                 </div>
                 <div class="col-8 col-sm-10 col-md-10">
                   <h4>ウォーターサーバーの冷温水無料！</h4>
@@ -206,7 +201,7 @@ $asset = function ($path) {
 
               <div class="row boxgray">
                 <div class="col-4 col-sm-2 col-md-2">
-                  <img src="<?php echo $asset('img/plan/plan-icon03.webp'); ?>" alt="靴置き場無料">
+                  <img src="<?php echo esc_url($static . '/plan/plan-icon03.webp'); ?>" alt="靴置き場無料">
                 </div>
                 <div class="col-8 col-sm-10 col-md-10">
                   <h4>靴置き場無料</h4>
@@ -217,7 +212,7 @@ $asset = function ($path) {
               <div class="row">
                 <div class="col-10 col-sm-6">
                   <div align="center">
-                    <a href="/reserve/beginner"><img src="<?php echo $asset('img/btn-yoyakuflow-off.svg'); ?>" alt="ご予約の流れはこちら"></a>
+                    <a href="/reserve/beginner/"><img src="<?php echo esc_url($static . '/btn-yoyakuflow-off.svg'); ?>" alt="ご予約の流れはこちら"></a>
                   </div>
                 </div>
               </div>
@@ -235,11 +230,11 @@ $asset = function ($path) {
               </div>
               <div class="row mt20">
                 <div class="col-12 col-sm-8 mt20">
-                  <img src="<?php echo $asset('img/plan/plan-21img01.webp'); ?>" alt="余ったトレーニングの繰り越しサービス">
+                  <img src="<?php echo esc_url($static . '/plan/plan-21img01.webp'); ?>" alt="余ったトレーニングの繰り越しサービス">
                   <h6 class="mt20 lh-160 font-120">セッションの繰り越し回数に上限なく、<br class="sp-none">余ったセッションは無期限で繰リ越しすることができます。</h6>
                   <div class="box">
                     <div class="row">
-                      <div class="col-3 col-sm-2 pt20 pr0" align="center"><img src="<?php echo $asset('img/plan/face.webp'); ?>" alt=""></div>
+                      <div class="col-3 col-sm-2 pt20 pr0" align="center"><img src="<?php echo esc_url($static . '/plan/face.webp'); ?>" alt=""></div>
                       <div class="col-9 col-md-10">
                         <p class="mt10 font-90">
                           ※退会する際は余っているセッション含め、権利を消失します。<br>
@@ -247,7 +242,7 @@ $asset = function ($path) {
                           （※ただし休会中はトレーニングを行うことはできませんのでご注意ください。）<br>
                           ※休会は初月0円、翌月以降は月1,100円(税込)です。<br>
                           ※一旦決済した利用料は、返還できません。<br><br>
-                          <a href="/contact/#faq07" class="blue">＞＞ 休会についてはこちら</a>
+                          <a href="/contact#faq07" class="blue">＞＞ 休会についてはこちら</a>
                         </p>
                       </div>
                     </div>
@@ -268,11 +263,11 @@ $asset = function ($path) {
               </div>
               <div class="row mt20">
                 <div class="col-12 col-sm-8 mb20">
-                  <img src="<?php echo $asset('img/plan/plan-22_06.webp'); ?>" alt="お財布にやさしい安心できる価格設定">
+                  <img src="<?php echo esc_url($static . '/plan/plan-22_06.webp'); ?>" alt="お財布にやさしい安心できる価格設定">
                   <p class="mt10 font-90">
                     ※当社調べ。24時間ジムは入会金2,200円、事務手数料3,300円、月額7,128円。他社パーソナルジムは入会金33,000円、月額10,7800円のところと比較をしています。<br><br>
-                    <a href="/contact/#faq06" class="blue">＞＞ 退会についてはこちら</a><br>
-                    <a href="/contact/#faq07" class="blue">＞＞ 休会についてはこちら</a>
+                    <a href="/contact#faq06" class="blue">＞＞ 退会についてはこちら</a><br>
+                    <a href="/contact#faq07" class="blue">＞＞ 休会についてはこちら</a>
                   </p>
                 </div>
               </div>
@@ -289,18 +284,17 @@ $asset = function ($path) {
             <div class="row">
               <div class="col-12 col-md-8 mb30">
                 <h3>スポットプラン(単発参加)</h3>
-                <img src="<?php echo $asset('img/plan/gr-plan01.webp'); ?>" alt="単発参加スポットプラン ￥2,000/回(税込)">
+                <img src="<?php echo esc_url($static . '/plan/gr-plan01.webp'); ?>" alt="単発参加スポットプラン ￥2,000/回(税込)">
                 <p class="mt5 text-left">
                   単発でエビジムのオンラインHIITにご参加いただけるプランです。まずは試しに体験してみたい、ご自身のタイミングでトレーニングをされたい方にオススメなプランになります。プロのトレーナーによる最新のトレーニングをぜひ一度体験してみてください。
                 </p>
               </div>
-              <!-- 通い放題プラン（現在非表示だったためコメントアウトのまま） -->
             </div>
 
             <div class="row">
               <div class="col-10 col-sm-6">
                 <div align="center">
-                  <a href="https://hiit.evigym.com/" target="_blank" rel="noopener"><img src="<?php echo $asset('img/btn-yoyakuflow-off.svg'); ?>" alt="ご予約方の流れはこちら"></a>
+                  <a href="https://hiit.evigym.com/" target="_blank" rel="noopener"><img src="<?php echo esc_url($static . '/btn-yoyakuflow-off.svg'); ?>" alt="ご予約方の流れはこちら"></a>
                 </div>
               </div>
             </div>
@@ -316,7 +310,7 @@ $asset = function ($path) {
               </div>
               <div class="row mt20">
                 <div class="col-8 col-sm-4 mb20" align="center">
-                  <a href="/trainers/koyama/"><img src="<?php echo $asset('img/plan/gr-oyama.webp'); ?>" alt="小山啓太トレーナー"></a>
+                  <a href="/trainers/koyama/"><img src="<?php echo esc_url($static . '/plan/gr-oyama.webp'); ?>" alt="小山啓太トレーナー"></a>
                 </div>
                 <div class="col-12 col-sm-8 mb20">
                   <div class="tr-name"><a href="/trainers/koyama/" class="bold font-140">小山啓太トレーナー</a></div>
@@ -324,7 +318,7 @@ $asset = function ($path) {
                     全米アスレティック・トレーナーズ協会公認パーソナルトレーナー（ATC）でアテネオリンピックでは選手の指導・サポート実施。ケンブリッジ大学において世界教育会議では最優秀研究賞受賞と様々な実績を持つ世界的なトレーナーです。<br>
                     プログラムは参加者に事前にアンケートを行い、要望に合わせてパーソナライズした運動メニューを組んでいます。お腹周りを引き締めたい、脚をスリムにしたいなど。あなたの要望に向き合ったメニューを組むので、ほかのどのオンラインジムよりも高い効果が期待できます！
                   </p>
-                  <div align="center"><img src="<?php echo $asset('img/plan/gr-oyamahistory.webp'); ?>" alt="履歴" id="oyamahistry"></div>
+                  <div align="center"><img src="<?php echo esc_url($static . '/plan/gr-oyamahistory.webp'); ?>" alt="履歴" id="oyamahistry"></div>
                 </div>
               </div>
             </div>
@@ -340,7 +334,7 @@ $asset = function ($path) {
               </div>
               <div class="row mt20">
                 <div class="col-8 col-sm-4 mb20" align="center">
-                  <img src="<?php echo $asset('img/plan/gr-week.webp'); ?>" alt="火曜日7:30～ /金曜日7:30～">
+                  <img src="<?php echo esc_url($static . '/plan/gr-week.webp'); ?>" alt="火曜日7:30～ /金曜日7:30～">
                 </div>
                 <div class="col-12 col-sm-8 mb20">
                   <h4 class="mt10 mb10">火・金曜日の朝7:30で日程を調整</h4>
@@ -360,7 +354,7 @@ $asset = function ($path) {
               </div>
               <div class="row mt20">
                 <div class="col-11 col-md-8" align="center">
-                  <img src="<?php echo $asset('img/plan/gr-point3.webp'); ?>" alt="参加者は限定20名 / セッションは45分間 / 必要な広さは2畳だけ">
+                  <img src="<?php echo esc_url($static . '/plan/gr-point3.webp'); ?>" alt="参加者は限定20名 / セッションは45分間 / 必要な広さは2畳だけ">
                 </div>
                 <div class="col-12 mb20">
                   <h4 class="mt10 mb10">セッション時間は45分間</h4>
@@ -372,7 +366,7 @@ $asset = function ($path) {
               <div class="row">
                 <div class="col-10 col-sm-6">
                   <div align="center">
-                    <a href="https://hiit.evigym.com/" target="_blank" rel="noopener"><img src="<?php echo $asset('img/btn-yoyakuflow-off.svg'); ?>" alt="ご予約方の流れはこちら"></a>
+                    <a href="https://hiit.evigym.com/" target="_blank" rel="noopener"><img src="<?php echo esc_url($static . '/btn-yoyakuflow-off.svg'); ?>" alt="ご予約方の流れはこちら"></a>
                   </div>
                 </div>
               </div>
@@ -389,7 +383,7 @@ $asset = function ($path) {
       <div class="container mt0">
         <div class="row bg311301">
           <div class="col-12 tit mt40 js-animation" align="center">
-            <img src="<?php echo $asset('img/Coupon.webp'); ?>" alt="Coupon">
+            <img src="<?php echo esc_url($static . '/Coupon.webp'); ?>" alt="Coupon">
             <h2 class="white">初回体験クーポン</h2>
             <hr class="white">
           </div>
@@ -401,17 +395,17 @@ $asset = function ($path) {
       <div class="row mb15" align="center">
         <div class="col-12 col-sm-12">
           <h2 class="mt20 mb10 font-200">2025年7月31日まで</h2>
-          <img src="<?php echo $asset('img/plan/初回体験キャンペーンバナー.jpg'); ?>" alt="">
+          <img src="<?php echo esc_url($static . '/plan/初回体験キャンペーンバナー.jpg'); ?>" alt="">
           <p class="mb10 font-140">- CLICK HERE -</p>
         </div>
       </div>
 
       <div class="row" align="center">
         <div class="col-6">
-          <a href="/reserve/beginner"><img src="<?php echo $asset('img/btn-web-off.svg'); ?>" alt="ウェブからの予約" class="boxshadow"></a>
+          <a href="/reserve/beginner/"><img src="<?php echo esc_url($static . '/btn-web-off.svg'); ?>" alt="ウェブからの予約" class="boxshadow"></a>
         </div>
         <div class="col-6">
-          <a href="https://lin.ee/o8z7iZZ"><img src="<?php echo $asset('img/btn-line-off.svg'); ?>" alt="LINEからの予約" class="boxshadow"></a>
+          <a href="https://lin.ee/o8z7iZZ"><img src="<?php echo esc_url($static . '/btn-line-off.svg'); ?>" alt="LINEからの予約" class="boxshadow"></a>
         </div>
         <div class="col-12 mt20">
           <p>※セッション時間は着替え10分を別にして50分間です。</p>

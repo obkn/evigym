@@ -2,22 +2,28 @@
 
 /**
  * index.php
- * evigym テーマの仮トップページ
  */
+if (!defined('ABSPATH')) exit;
 
 get_header(); ?>
-
-<main id="primary" class="site-main" style="font-family:sans-serif; text-align:center; padding:80px 0;">
-  <h1 style="font-size:2.5rem; margin-bottom:1rem;">🎯 eviGym Theme Placeholder</h1>
-  <p style="font-size:1.1rem; color:#666;">
-    テーマが正常に読み込まれています。<br>
-    これから <code>functions.php</code> や <code>inc/</code> にコードを追加していきます。
-  </p>
-  <p style="margin-top:2rem;">
-    <a href="<?php echo admin_url(); ?>" style="background:#0073aa; color:#fff; padding:0.5em 1.2em; border-radius:4px; text-decoration:none;">
-      管理画面へ戻る
-    </a>
-  </p>
+<main id="main">
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+      <?php the_content(); ?>
+    <?php endwhile; ?>
+    <?php the_posts_pagination(); ?>
+  <?php else : ?>
+    <?php if (current_user_can('manage_options')) : ?>
+      <section style="padding:64px 0;">
+        <h1 style="font-size:1.25rem;margin:0 0 0.5rem;">index.php fallback</h1>
+        <p style="color:#666;">他のテンプレートにマッチしていないため <code>index.php</code> が表示されています。</p>
+      </section>
+    <?php else : ?>
+      <?php status_header(404); ?>
+      <section id="not-found" style="padding:64px 0;">
+        <h1>ページが見つかりませんでした</h1>
+      </section>
+    <?php endif; ?>
+  <?php endif; ?>
 </main>
-
 <?php get_footer();

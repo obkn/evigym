@@ -38,16 +38,23 @@ if (! defined('ABSPATH')) exit;
 </head>
 
 <?php
-if (is_front_page()) {
+global $post;
+if (is_front_page() || is_page_template('page-front.php')) {
   $body_id = 'home';
+  $body_class = '';
+} elseif (is_page('online-training') || is_page_template('page-online-training.php')) {
+  $body_id = 'online';
+  $body_class = 'page';
 } elseif (is_singular()) {
-  global $post;
-  $body_id = $post->post_name;
+  $uri_parts = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+  $body_id = !empty($uri_parts[0]) ? $uri_parts[0] : '';
+  $body_class = 'page';
 } else {
   $body_id = '';
+  $body_class = '';
 }
 ?>
-<body<?php echo $body_id ? ' id="' . esc_attr($body_id) . '"' : ''; ?> <?php body_class(); ?>>
+<body<?php echo $body_id ? ' id="' . esc_attr($body_id) . '"' : ''; ?><?php echo $body_class ? ' class="' . esc_attr($body_class) . '"' : ''; ?>>
   <?php wp_body_open(); ?>
 
   <!-- Google Tag Manager (noscript) -->

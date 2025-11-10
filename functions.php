@@ -2,77 +2,114 @@
 
 /**
  * eviGym Theme functions.php
- * 
- * 現行サイト（Laravel + WP構成）のWP部分を完全再現するための構成。
- * すべての機能は inc ディレクトリに分割し、ここから読み込む。
  */
-
 if (!defined('ABSPATH')) exit;
 
-// 定数定義
+/* ========== 定数 & 必須読み込み ========== */
 define('EVIGYM_THEME_PATH', get_template_directory());
-define('EVIGYM_INC_PATH', EVIGYM_THEME_PATH . '/inc');
+define('EVIGYM_INC_PATH',   EVIGYM_THEME_PATH . '/inc');
 
-// ======================================
-// 🔧 必須ファイル読込
-// ======================================
+/* ========== テーマ機能・共通処理の読込 ========== */
+require_once EVIGYM_INC_PATH . '/setup.php';   // テーマの基本設定（サムネイル・メニューなど）
+require_once EVIGYM_INC_PATH . '/enqueue.php'; // CSS・JSの読み込み管理
+require_once EVIGYM_INC_PATH . '/seo.php';     // SEO関連（AIOSEOの調整）
+require_once EVIGYM_INC_PATH . '/others.php';  // 軽量化・管理バー・コメント無効など
 
-require_once EVIGYM_INC_PATH . '/setup.php';       // テーマ初期設定
-require_once EVIGYM_INC_PATH . '/enqueue.php';     // CSS/JS 読み込み
-require_once EVIGYM_INC_PATH . '/redirect.php';    // リダイレクト制御
-require_once EVIGYM_INC_PATH . '/seo.php';         // SEO最適化・重複抑止
-require_once EVIGYM_INC_PATH . '/others.php';      // その他共通カスタマイズ
+/* ========== 1回だけルール再生成 ========== */
+add_action('after_switch_theme', function () {
+  flush_rewrite_rules(false);
+});
+add_action('init', function () {
+  if (!get_option('evigym_rewrite_flushed_20251107c')) {
+    flush_rewrite_rules(false);
+    update_option('evigym_rewrite_flushed_20251107c', 1);
+  }
+}, 99);
 
-// require_once EVIGYM_INC_PATH . '/cpt.php';         // カスタム投稿タイプ
-// require_once EVIGYM_INC_PATH . '/taxonomy.php';    // カスタムタクソノミー
-// require_once EVIGYM_INC_PATH . '/scf.php';         // Smart Custom Fields 補助
+/* ========== パーマリンク & リライトルール ========== */
+add_action('init', function () {
+  // 投稿（post）を /howto-training/%postname%/
+  global $wp_rewrite;
+  $wp_rewrite->set_permalink_structure('/howto-training/%postname%/');
 
-// ======================================
-// 🧩 デバッグ・環境確認
-// ======================================
-// （必要ならコメントアウト解除して使用）
-//
-// add_action('wp_footer', function() {
-//   echo '<pre style="background:#000;color:#0f0;padding:10px;">';
-//   echo 'Theme loaded: ' . wp_get_theme()->get('Name');
-//   echo "\n";
-//   echo 'Loaded includes:';
-//   echo "\n";
-//   print_r(get_included_files());
-//   echo '</pre>';
-// });
+  // 仮想ページ用クエリ変数（/blog/{store}/）
+  add_rewrite_tag('%evistore%', '([^&]+)');
 
+  // /blog/{store}/{id}/ → gym_blog個別
+  add_rewrite_rule('^blog/([^/]+)/([0-9]+)/?$', 'index.php?post_type=gym_blog&p=$matches[2]', 'top');
 
-/**
- * gym_blog（店舗ブログ）の個別URLを
- *   /blog/{store-term}/{post-id}
- * にする。タクソノミーは gym_blog_taxonomy（= 投稿店舗）。
- */
-add_filter('post_type_link', function ($permalink, $post, $leavename) {
+  // /blog/{store}/ → 店舗別一覧（仮想ページ）
+  add_rewrite_rule('^blog/([^/]+)/?$', 'index.php?evistore=$matches[1]', 'top');
+
+  // /blog/ → 固定ページ（slug: blog）
+  add_rewrite_rule('^blog/?$', 'index.php?pagename=blog', 'top');
+
+  // /staff/{slug} → trainer
+  add_rewrite_rule('^staff/([^/]+)/?$', 'index.php?post_type=trainer&name=$matches[1]', 'top');
+}, 5);
+
+/* ========== gym_blog のリンク整形 ========== */
+add_filter('post_type_link', function ($permalink, $post) {
   if ($post->post_type !== 'gym_blog') return $permalink;
-
-  // 投稿に紐づく「投稿店舗」タームの先頭を使う（未設定なら 'store' を仮置き）
   $terms = wp_get_post_terms($post->ID, 'gym_blog_taxonomy');
   $term  = (!is_wp_error($terms) && !empty($terms)) ? $terms[0]->slug : 'store';
+  return home_url(user_trailingslashit("blog/{$term}/{$post->ID}"));
+}, 10, 2);
 
-  // 期待する形: /blog/{store}/{ID}
-  $path = sprintf('blog/%s/%d', $term, $post->ID);
-  return home_url(user_trailingslashit($path));
-}, 10, 3);
-
-/**
- * 上記URLを解決するためのリライトルール
- * 例) /blog/shinjuku/8722 -> index.php?p=8722
- * （ID指定で呼ぶのでポストタイプ混在でも解決できる）
- */
-add_action('init', function () {
-  add_rewrite_rule('^blog/([^/]+)/([0-9]+)/?$', 'index.php?p=$matches[2]', 'top');
+/* ========== /blog/{store}/ 用テンプレート差し替え ========== */
+add_filter('query_vars', function ($vars) {
+  $vars[] = 'evistore';
+  return $vars;
+});
+add_filter('template_include', function ($template) {
+  $store = get_query_var('evistore');
+  if (!empty($store)) {
+    $store_tpl = locate_template('page-blog-store.php');
+    if ($store_tpl) return $store_tpl;
+  }
+  return $template;
 });
 
-/**
- * テーマ切替直後に1回だけリライトルールを再生成
- * （既に保存済みなら害はなし。気になる場合は削除可）
- */
-add_action('after_switch_theme', function () {
-  flush_rewrite_rules();
-});
+/* ========== CPT の rewrite を一括調整 ========== */
+add_filter('register_post_type_args', function ($args, $post_type) {
+  switch ($post_type) {
+    case 'trainer':
+      $args['rewrite'] = ['slug' => 'trainers', 'with_front' => false, 'feeds' => false, 'pages' => true];
+      break;
+    case 'gym':
+      $args['rewrite'] = ['slug' => 'stores', 'with_front' => false, 'feeds' => false, 'pages' => true];
+      break;
+    case 'interview':
+      $args['rewrite'] = ['slug' => 'interview', 'with_front' => false, 'feeds' => false, 'pages' => true];
+      break;
+    case 'news':
+      $args['rewrite'] = ['slug' => 'news', 'with_front' => false, 'feeds' => false, 'pages' => true];
+      $args['has_archive'] = false;
+      break;
+  }
+  return $args;
+}, 10, 2);
+
+/* ========== iframe 許可（post コンテキスト拡張） ========== */
+add_filter('wp_kses_allowed_html', function ($tags, $context) {
+  if ($context === 'post') {
+    $tags['iframe'] = [
+      'src'             => true,
+      'width'           => true,
+      'height'          => true,
+      'frameborder'     => true,
+      'allow'           => true,
+      'allowfullscreen' => true,
+      'title'           => true,
+      'style'           => true,
+      'class'           => true,
+      'loading'         => true,
+      'referrerpolicy'  => true,
+      'name'            => true,
+      'id'              => true,
+      'sandbox'         => true,
+      'srcdoc'          => true,
+    ];
+  }
+  return $tags;
+}, 10, 2);

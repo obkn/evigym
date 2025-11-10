@@ -65,7 +65,7 @@
 
     // ---- 画像エラー処理 ----
     $('img').on('error', function () {
-      var fallback = '/img/no-img.webp';
+      var fallback = '/assets/static/img/no-img.webp';
       var now = $(this).attr('src') || '';
       if (now === fallback) return;
       if (now.indexOf('files/') > 0) {
