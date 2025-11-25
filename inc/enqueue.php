@@ -12,10 +12,24 @@ add_action('wp_enqueue_scripts', function () {
   $uri = get_template_directory_uri();
   $ver = fn($rel) => file_exists("$dir$rel") ? filemtime("$dir$rel") : null;
 
-  // ---------- FC（/fc or page-fc.php）は fc.css のみ ----------
+  // ---------- FC（/fc or page-fc.php）は fc.css + style.css ----------
   $is_fc = is_page_template('page-fc.php') || is_page('fc');
   if ($is_fc) {
-    wp_enqueue_style('evigym-fc', $uri . '/assets/static/css/fc.css', [], $ver('/assets/static/css/fc.css'));
+    wp_enqueue_style(
+      'evigym-fc',
+      $uri . '/assets/static/css/fc.css',
+      [],
+      $ver('/assets/static/css/fc.css')
+    );
+
+    // ★ 全ページ共通の追記用CSS（FCでも読み込む）
+    wp_enqueue_style(
+      'evigym-style',
+      $uri . '/style.css',
+      ['evigym-fc'],
+      $ver('/style.css')
+    );
+
     return;
   }
 
@@ -30,6 +44,14 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('evigym-page00',      $uri . '/assets/static/css/minify/page00.css', ['evigym-common'], $ver('/assets/static/css/minify/page00.css'));
   wp_enqueue_style('evigym-tabbar',      $uri . '/assets/static/css/minify/tabbar.css', ['evigym-common'], $ver('/assets/static/css/minify/tabbar.css'));
   wp_enqueue_style('evigym-fontawesome', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', [], '5.5.0');
+
+  // ★ 全ページ共通の追記用CSS（最後に読み込む・上書きしやすい）
+  wp_enqueue_style(
+    'evigym-style',
+    $uri . '/style.css',
+    ['evigym-tabbar'],
+    $ver('/style.css')
+  );
 
   // JS（最低限）
   wp_enqueue_script('jquery');
@@ -83,5 +105,14 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('evigym-swiper8', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], '8', true);
     wp_enqueue_style('evigym-gym', $uri . '/assets/static/css/inline/gym.css', ['evigym-swiper8'], $ver('/assets/static/css/inline/gym.css'));
     wp_enqueue_script('evigym-gym', $uri . '/assets/static/js/inline/gym.js', ['jquery', 'evigym-main', 'evigym-swiper8'], $ver('/assets/static/js/inline/gym.js'), true);
+  }
+
+  if (is_404()) {
+    wp_enqueue_style(
+      'evigym-404',
+      $uri . '/assets/static/css/inline/404.css',
+      [],
+      $ver('/assets/static/css/inline/404.css')
+    );
   }
 }, 50);
